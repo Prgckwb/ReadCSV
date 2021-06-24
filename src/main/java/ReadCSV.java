@@ -27,6 +27,7 @@ class ReadCSV {
         printStationsList(targetStations, tag);
     }
 
+    // 駅ごとに開業して任意のタグで囲んで出力するメソッド
     public static void printStationsList(List<String> stationsList, String tag) {
         if (tag.equals("")) {
             for (String str : stationsList) System.out.println(str);
@@ -35,5 +36,14 @@ class ReadCSV {
                 System.out.println("<" + tag + ">" + str + "</" + tag + ">");
             }
         }
+    }
+
+    // 配列として使いたい時に使うメソッド
+    public static void printStationsAsArray(List<String> stationsList){
+        System.out.print("[");
+        for (String str : stationsList){
+            System.out.print("\"" + str + "\", ");
+        }
+        System.out.println("]");
     }
 }
