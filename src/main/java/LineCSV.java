@@ -70,7 +70,7 @@ class LineCSV{
             return "-1";
         }else{
             for(int i = 0; i < optionsLineCd.size(); i++){
-                System.out.print(" ["+i+"]:" + optionsLineName.get(i));
+                System.out.println(" ["+i+"]:" + optionsLineName.get(i));
             }
             System.out.println();
             System.out.print("検索したい路線番号 > ");
